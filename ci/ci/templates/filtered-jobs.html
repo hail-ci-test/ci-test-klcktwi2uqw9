@@ -1,0 +1,11 @@
+{% from "job-table.html" import job_table with context %}
+{% macro filtered_jobs(running_jobs, failed_jobs, jobs) %}
+{% if running_jobs is not none %}
+  <h3>Running</h3>
+  {{ job_table(running_jobs, "running-jobs", "runningJobsSearchBar") }}
+{% endif %}
+{% if failed_jobs is not none %}
+  <h3>Failed</h3>
+  {{ job_table(failed_jobs, "failed-jobs", "failedJobsSearchBar") }}
+{% endif %}
+{{ job_table(jobs, "jobs", "jobsSearchBar") }}
