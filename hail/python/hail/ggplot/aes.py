@@ -2,6 +2,7 @@ from collections.abc import Mapping
 from hail.expr import Expression
 from hail import literal
 
+print("foo")
 
 class Aesthetic(Mapping):
 
